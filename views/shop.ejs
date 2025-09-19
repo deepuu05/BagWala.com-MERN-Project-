@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/shop.css">
+    <title>Shop</title>
+</head>
+<body>
+    <h1> Mai shop hu</h1>
+    <a href="/users/logout">Logout</a>
+    <div class="box">
+        <% allproducts.forEach(function(product) { %>
+        <div class="bokes"style="background-color: <%= product.panelcolor %>;color:<%=product.textcolor%>;" >
+            <div class="img" >
+               <img src="data:image/jpeg;base64,<%=product.image.toString('base64') %>">
+            </div>
+            <div>
+                <h4><%=product.name%></h4>
+                <p>Rs <%= product.price%></p>
+            </div>
+        </div>
+        <% })%>
+    </div>
+</body>
+</html>

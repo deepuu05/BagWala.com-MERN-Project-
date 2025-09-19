@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Products</title>
+</head>
+
+<body>
+     <% if(success.length>0){ %>
+     <div>
+        <span>  <%= success%>  </span>
+     </div>
+     <% } %>
+   
+    <form action="/products/create" method="post" enctype="multipart/form-data">
+
+        <div>
+            <div>
+                <input type="file" placeholder="Product Name " name="image">
+            </div>
+        </div>
+        <div>
+
+            <div>
+                <input type="text" placeholder="Product Name " name="name">
+            </div>
+            <div>
+                <input type="text" placeholder="Product Price " name="price">
+            </div>
+            <div>
+                <input type="text" placeholder="Discount Price " name="discount">
+            </div>
+        </div>
+        <div>
+             <div>
+                <input type="text" placeholder="Background Color " name="bgcolor">
+            </div>
+             <div>
+                <input type="text" placeholder="Panel Color " name="panelcolor">
+            </div>
+             <div>
+                <input type="text" placeholder="Text Color" name="textcolor">
+            </div>
+        </div>
+       <input type="submit" value="Create New Product">
+
+    </form>
+</body>
+
+</html>
