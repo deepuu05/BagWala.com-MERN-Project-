@@ -14,3 +14,19 @@ h1{
 #logo{
     color:red;
 }
+#pop span{
+ 
+    padding: 12px;
+    margin: 0px 10px 10px 10px ;
+    color: black;
+    background-color: rgb(155, 244, 244);
+    border-radius: 2px;
+    font-size: 23px;
+
+}
+#pop{
+
+           display: flex;
+           justify-content: center;
+           align-items: center; 
+}

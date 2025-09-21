@@ -7,10 +7,14 @@ const userSchema = mongoose.Schema({
     },
     email: String,
     password:String,
-    cart : {
-        type:Array,
-        default:[]
-    },
+    // cart : {
+    //     type:Array,
+    //     default:[]
+    // },
+    cart : [{
+        type:mongoose.Schema.Types.ObjectId,
+        ref:"product"
+    }],
     // isadmin : Boolean,
     orders:{
         type:Array,
