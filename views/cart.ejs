@@ -3,10 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/shop.css">
     <title>Carts</title>
+
 </head>
 <body>
-    
+    <a href="/users/logout">Logout</a>
+     <a href="/cart">Cart</a>
+    <a href="/shop">Shop</a>
     <h1> Hi i am Cart</h1>
+    <div class="box">
+        <% user.cart.forEach(function(cartData) { %>
+            <div class="bokes" style="background-color: <%= cartData.panelcolor %>;color:<%=cartData.textcolor%>;">
+                <div class="img">
+                    <img src="data:image/jpeg;base64,<%=cartData.image.toString('base64') %>">
+                </div>
+                <div>
+                    <div>
+                        <h4>
+                            <%=cartData.name%>
+                        </h4>
+                        <h4>
+                            <%=Number(cartData.discount)%>
+                        </h4>
+                        <h4>
+                           net bill <%=Number(bill)%>
+                        </h4>
+                        <p>Rs <%= cartData.price%>
+                        </p>
+                    </div>
+                    <div>
+                        
+                    </div>
+                </div>
+            </div>
+            <% })%>
+    </div>
 </body>
 </html>
